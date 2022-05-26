@@ -1,8 +1,27 @@
 # ts-esm-workspaces
 
-## WORK IN PROGRESS
+## BUG xx?
 
-This is not complete and is actively being worked on. If commits are not made daily, I forgot to delete this note.
+This branch `bug-main-required-to-build` demonstrates that a `main` field is required in the `package.json` even though the guidance in the [handbook](https://www.typescriptlang.org/docs/handbook/esm-node.html) states:
+
+> Node.js supports a new field for defining entry points in package.json called "exports". This field is a more powerful alternative to defining "main" in package.json, and can control what parts of your package are exposed to consumers.
+
+This branch demonstrates that the moment you remove the `main` on the `shared` project, the build will fail with:
+
+````
+~/p/ts-esm-workspaces ❯❯❯ yarn clean && yarn build
+packages/client/src/presentSomething.ts:1:36 - error TS2307: Cannot find module '@rosskevin/ts-esm-workspaces-shared' or its corresponding type declarations.
+
+1 import { inc, appendMessage } from "@rosskevin/ts-esm-workspaces-shared";
+```
+
+But with the `main` intact, resolution occurs and it builds witout error.  Bug?  Seems so from my perspective.
+
+## Reproduction
+
+
+
+---
 
 ## Goal
 
@@ -21,7 +40,7 @@ This is not complete and is actively being worked on. If commits are not made da
 ## Status
 
 - `tsc -b` works, but only with the above `main` issue caveat. Still more to do and try.
-  > Node.js supports a new field for defining entry points in package.json called "exports". This field is a more powerful alternative to defining "main" in package.json, and can control what parts of your package are exposed to consumers.
+ > Node.js supports a new field for defining entry points in package.json called "exports". This field is a more powerful alternative to defining "main" in package.json, and can control what parts of your package are exposed to consumers.
 
 ## Structure
 
@@ -33,12 +52,12 @@ This is not complete and is actively being worked on. If commits are not made da
 
 - Be sure to check the `.vscode` settings to setup the build task, and setup the preference to use the workspace's typescript sdk.
 - Add the following to aid with the ESM style imports:
-  ```json
-  {
-    "javascript.preferences.importModuleSpecifierEnding": "js",
-    "typescript.preferences.importModuleSpecifierEnding": "js"
-  }
-  ```
+ ```json
+ {
+   "javascript.preferences.importModuleSpecifierEnding": "js",
+   "typescript.preferences.importModuleSpecifierEnding": "js"
+ }
+````
 
 ## Migrating to ESM
 
