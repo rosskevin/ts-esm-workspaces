@@ -4,15 +4,12 @@
   "display": "Shared node base",
 
   "compilerOptions": {
-    // "lib": ["esnext"],
-    // "module": "nodenext",
-    // "target": "esnext",
     // "moduleResolution": "nodenext",
 
     // ----
     // https://github.com/sindresorhus/tsconfig/blob/main/tsconfig.json
     "lib": ["dom", "dom.iterable", "es2020"],
-    "module": "nodenext",
+    "module": "NodeNext",
     "target": "es2020", // Node.js >=14
 
     "allowSyntheticDefaultImports": true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import. This flag tells TypeScript that it's okay to use import on CommonJS modules.
