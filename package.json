@@ -8,20 +8,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "devDependencies": {
-    "@snowpack/plugin-react-refresh": "^2.5.0",
-    "@types/node": "^17.0.35",
-    "http-server": "^14.1.0",
-    "nodemon": "^2.0.16",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.6.2",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "shelljs": "^0.8.5",
-    "snowpack": "^3.8.8",
-    "ts-node": "^10.8.0",
-    "typescript": "^4.7.2"
-  },
   "scripts": {
     "dev-client": "snowpack dev",
     "dev-server": "nodemon",
@@ -35,5 +21,19 @@
     "prod-server": "yarn build && node --experimental-specifier-resolution=node packages/server/lib/server.js",
     "build-prod": "node scripts/build-prod.js",
     "serve-prod": "node --experimental-specifier-resolution=node prod/packages/server/lib/server.js"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-react-refresh": "^2.5.0",
+    "@types/node": "^17.0.35",
+    "http-server": "^14.1.0",
+    "nodemon": "^2.0.16",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "shelljs": "^0.8.5",
+    "snowpack": "^3.8.8",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
   }
 }
