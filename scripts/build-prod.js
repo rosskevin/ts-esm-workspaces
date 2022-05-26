@@ -19,14 +19,14 @@ shell.exec("yarn clean");
 shell.exec("yarn build");
 shell.exec("yarn dist");
 
-// Load all package.json files and change from src/index.ts to lib/index.js
+// Load all package.json files and change from src/index.ts to dist/index.js
 const pkgJsons = ["packages/shared/package.json"];
 
 for (const pkgJson of pkgJsons) {
   let rawdata = fs.readFileSync(pkgJson);
   let p = JSON.parse(rawdata);
   if (p.main === "src/index.ts") {
-    p.main = "lib/index.js";
+    p.main = "dist/index.js";
   }
   let data = JSON.stringify(p, undefined, 2);
   fs.writeFileSync(pkgJson, data);

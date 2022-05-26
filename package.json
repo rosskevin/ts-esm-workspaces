@@ -15,15 +15,16 @@
     "start": "run-p -l dev-client dev-server typecheck",
     "build": "tsc -b packages",
     "rebuild": "run-s clean build",
-    "clean": "tsc -b packages --clean && rm -rf packages/*/lib && rm -rf packages/*/test/lib && rm -rf packages/*/benchmark/lib && rm -rf packages/*/coverage",
+    "clean": "tsc -b packages --clean && rm -rf packages/*/dist && rm -rf packages/*/test/dist && rm -rf packages/*/benchmark/dist && rm -rf packages/*/coverage",
     "dist": "snowpack build",
     "prod-client": "yarn dist && cd dist && http-server",
-    "prod-server": "yarn build && node --experimental-specifier-resolution=node packages/server/lib/server.js",
+    "prod-server": "yarn build && node --experimental-specifier-resolution=node packages/server/dist/server.js",
     "build-prod": "node scripts/build-prod.js",
-    "serve-prod": "node --experimental-specifier-resolution=node prod/packages/server/lib/server.js"
+    "serve-prod": "node --experimental-specifier-resolution=node prod/packages/server/dist/server.js"
   },
   "devDependencies": {
     "@snowpack/plugin-react-refresh": "^2.5.0",
+    "@tsconfig/create-react-app": "^1.0.2",
     "@types/node": "^17.0.35",
     "http-server": "^14.1.0",
     "nodemon": "^2.0.16",

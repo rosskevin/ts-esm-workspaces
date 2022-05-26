@@ -2,9 +2,9 @@
   "extends": "../tsconfig.settings.json",
   "include": ["src"],
   "compilerOptions": {
-    "outDir": "lib",
+    "outDir": "dist",
     "rootDir": "src",
-    "lib": ["dom", "es2015", "es2017.object", "esnext.asynciterable"],
+    "lib": ["dom", "es2015", "es2017.object", "esnext.asynciterable"]
   },
   "references": []
 }
