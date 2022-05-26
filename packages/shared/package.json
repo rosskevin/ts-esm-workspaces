@@ -2,7 +2,7 @@
   "name": "@rosskevin/ts-esm-workspaces-shared",
   "description": "Browser OR Node accessible published ESM library",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "src/index.js",
   "type": "module",
   "license": "MIT"
 }

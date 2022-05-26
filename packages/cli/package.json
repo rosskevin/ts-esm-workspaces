@@ -9,6 +9,7 @@
     "hello": "./dist/bin/hello.js"
   },
   "dependencies": {
+    "@rosskevin/ts-esm-workspaces-shared": "workspace:*",
     "shelljs": "^0.8.5"
   },
   "devDependencies": {

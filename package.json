@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "packageManager": "yarn@3.2.1",
-  "license": "MIT",
-  "private": true,
   "workspaces": [
     "packages/*"
   ],
+  "license": "MIT",
+  "private": true,
   "scripts": {
-    "build": "tsc -b packages",
+    "build": "tsc -b",
     "rebuild": "run-s clean build",
-    "clean": "tsc -b packages --clean && rm -rf packages/*/dist",
+    "clean": "tsc -b --clean && rm -rf packages/*/dist",
     "manipulate-dist-package-main-must-be-removed!!!": "node scripts/build-prod.js"
   },
   "devDependencies": {

@@ -3,8 +3,8 @@
   // all packages
   "files": [],
   "references": [
-    { "path": "client" },
-    { "path": "server" },
-    { "path": "shared" }
+    { "path": "packages/client" },
+    { "path": "packages/cli" },
+    { "path": "packages/shared" }
   ]
 }
