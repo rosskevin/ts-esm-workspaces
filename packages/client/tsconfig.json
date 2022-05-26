@@ -1,11 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "../tsconfig.settings.json",
+  "extends": "../tsconfig.react-lib.json",
   "include": ["src"],
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src",
-    "lib": ["dom", "es2019", "es2017.object", "esnext.asynciterable"]
+    "rootDir": "src"
   },
   "references": [{ "path": "../shared" }]
 }

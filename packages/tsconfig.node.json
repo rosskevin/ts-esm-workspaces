@@ -13,7 +13,7 @@
     // https://github.com/sindresorhus/tsconfig/blob/main/tsconfig.json
     "lib": ["dom", "dom.iterable", "es2020"],
     "module": "nodenext",
-    "target": "es2020", // Node.js 14
+    "target": "es2020", // Node.js >=14
 
     "allowSyntheticDefaultImports": true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import. This flag tells TypeScript that it's okay to use import on CommonJS modules.
     "resolveJsonModule": false, // ESM doesn't yet support JSON modules.
@@ -29,6 +29,8 @@
     // Our alterations to the base
     // "allowSyntheticDefaultImports": true,
 
+    // Ensure that .d.ts files are created by tsc
+    "declaration": true,
     // Do not allow js
     "allowJs": false,
     // No js, ts, maps when errors are reported
