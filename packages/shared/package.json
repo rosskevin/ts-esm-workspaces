@@ -1,6 +1,5 @@
 {
-  "private": true,
-  "name": "@app/shared",
+  "name": "@rosskevin/ts-esm-workspaces-shared",
   "version": "1.0.0",
   "main": "src/index.ts",
   "type": "module",

@@ -1,5 +1,5 @@
 {
-  "name": "ts-esm-workspaces",
+  "name": "@rosskevin/ts-esm-workspaces",
   "version": "1.0.0",
   "main": "index.js",
   "packageManager": "yarn@3.2.1",

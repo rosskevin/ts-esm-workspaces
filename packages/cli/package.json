@@ -1,0 +1,13 @@
+{
+  "name": "@rosskevin/ts-esm-workspaces-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.4"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4"
+  }
+}
