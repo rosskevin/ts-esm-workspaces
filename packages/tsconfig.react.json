@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "display": "React shared base",
+  "extends": "@tsconfig/create-react-app/tsconfig.json",
+
+  "compilerOptions": {
+    // All packages should be ESM, only the final webpack should be different.
+    "target": "esnext",
+    "module": "esnext",
+    // Final webpack should target modern browsers instead of es5 with es2015
+    // "target": "es2015",
+
+    // "moduleResolution": "node",
+
+    // Do not allow js
+    "allowJs": false,
+    // No js, ts, maps when errors are reported
+    "noEmitOnError": true,
+    // Do not allow inference to fall back to any type
+    "noImplicitAny": true,
+    // Ensure a return path
+    "noImplicitReturns": true,
+    // Report errors on unused local variables.
+    "noUnusedLocals": false,
+    // obj[foo] suppression
+    "suppressImplicitAnyIndexErrors": true,
+
+    // Ensure that .d.ts files are created by tsc, but not .js files (babel will do this for us)
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    // Generates a source map for .d.ts files which map back to the original .ts source file.
+    "declarationMap": true,
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true,
+
+    // material-ui uses emotion https://emotion.sh/docs/typescript
+    "jsxImportSource": "@emotion/react"
+  }
+}
