@@ -3,6 +3,12 @@
   "description": "Browser OR Node accessible published ESM library",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "src/index.js",
-  "type": "module"
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  }
 }

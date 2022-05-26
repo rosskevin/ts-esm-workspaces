@@ -2,8 +2,15 @@
   "name": "@rosskevin/ts-esm-workspaces-client",
   "description": "Browser based published ESM library",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "dependencies": {
     "@rosskevin/ts-esm-workspaces-shared": "1.0.0",
     "shelljs": "^0.8.5"

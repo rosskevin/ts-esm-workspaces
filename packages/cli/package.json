@@ -2,9 +2,15 @@
   "name": "@rosskevin/ts-esm-workspaces-cli",
   "description": "Node cli with published ESM command",
   "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
   "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "bin": {
     "hello": "./dist/bin/hello.js"
   },
