@@ -1,9 +1,10 @@
 # ts-esm-workspaces
 
-** WORK IN PROGRESS **
-GOAL: typescript project references + esm modules + yarn workspaces to simply produce a set of interdependent libraries that are _publishable_. This should be compliant with the latest from https://www.typescriptlang.org/docs/handbook/esm-node.html
+## WORK IN PROGRESS
 
-** OLD BELOW HERE **
+_GOAL_: typescript project references + esm modules + yarn workspaces to simply produce a set of interdependent libraries that are _publishable_. This should be compliant with the latest from https://www.typescriptlang.org/docs/handbook/esm-node.html
+
+## OLD BELOW HERE
 
 Demo app for ES Modules monorepo using:
 
