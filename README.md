@@ -30,8 +30,8 @@ This is not complete and is actively being worked on. If commits are not made da
 - Add the following to aid with the ESM style imports:
   ```json
   {
-  `"javascript.preferences.importModuleSpecifierEnding": "js",
-  `"typescript.preferences.importModuleSpecifierEnding": "js"
+    "javascript.preferences.importModuleSpecifierEnding": "js",
+    "typescript.preferences.importModuleSpecifierEnding": "js"
   }
   ```
 
