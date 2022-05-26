@@ -1,12 +1,13 @@
 {
+  "name": "ts-esm-workspaces",
+  "version": "1.0.0",
+  "main": "index.js",
+  "packageManager": "yarn@3.2.1",
+  "license": "MIT",
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
-  "name": "life-cycle-cost",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "private": true,
   "devDependencies": {
     "@snowpack/plugin-react-refresh": "^2.5.0",
     "@types/node": "^16.9.1",
