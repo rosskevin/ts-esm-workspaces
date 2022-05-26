@@ -18,6 +18,10 @@ This is not complete and is actively being worked on. If commits are not made da
 
 - `main` in `project.json` is required for building. This is invalid, as this is an ESM-only module and there should be no fallback at all to CJS (because one does not exist). It seems like a false flag pretending to be CJS, when this seems like a Typescript resolution error instead.
 
+## Status
+
+- `tsc -b` works, but only with the above `main` issue caveat. Still more to do and try.
+
 ## Structure
 
 - `client` - browser targeted tsconfig
