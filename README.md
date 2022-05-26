@@ -2,36 +2,49 @@
 
 ## WORK IN PROGRESS
 
-_GOAL_: typescript project references + esm modules + yarn workspaces to simply produce a set of interdependent libraries that are _publishable_. This should be compliant with the latest from https://www.typescriptlang.org/docs/handbook/esm-node.html
+This is not complete and is actively being worked on. If commits are not made daily, I forgot to delete this note.
 
-## OLD BELOW HERE
+## Goal
 
-Demo app for ES Modules monorepo using:
-
-- Yarn workspaces
+- A _publishable_ set of packages (not just an internal build)
 - Typescript project references
-- ts-node esm modules loading
-
-There are three packages
-
-- client (this is the browser code in react)
-- server (this is the server-side code for nodejs)
-- shared (this code is used by both client and server packages)
+- Yarn 2+ workspaces
+- ESM only modules that meet the specification (no fallbacks to CJS)
+- Browser _and_ Node targeted modules reusing a `shared` library (all published)
+- Follow the latest guidance from https://www.typescriptlang.org/docs/handbook/esm-node.html
+- Build simply with `tsc -b`
 
 ## Current issues
 
-_THIS CANNOT PRODUCE A PUBLISHABLE LIB_ See below for why
+- `main` in `project.json` is required for building. This is invalid, as this is an ESM-only module and there should be no fallback at all to CJS (because one does not exist). It seems like a false flag pretending to be CJS, when this seems like a Typescript resolution error instead.
 
-To have snowpack consume `.ts` files directly we give it an entry point which is a `.ts` file. Snowpack will follow any imports with relative-path specifiers and build a dependency tree of `.ts` files. However when snowpack encounters an import using a bare specifier to another package (eg. `@app/client` package importing from `"@app/shared"`) it will use standard node resultioh and look in `node_modules`. There it will find a file-system link created by yarn workspaces that points to the source code for the pacakge. It will look at the package.json file's main field and find `lib/index.js`. So it will load that and continue it's dependency tree using `.js` files in `lib` instead of `.ts` files in `src`. When we change a `src/*.ts` file in the `@app/shared` package snowpack will not react as in it's dependency tree it is watching `lib/*.js` files.
+## Structure
 
-The import chain looks something like this:
+- `client` - browser targeted tsconfig
+- `cli` - node targeted tsconfig
+- `shared` - code used by both environments
 
-`index.html -> packages/client/src/main.tsx -> ./app.tsx -> @app/shared -> node_modules/@app/shared/package.json -> main: "lib/index.js" -> packages/shared/lib/index.js -> more js files`
+## VSCode
 
-The exact same problem seems to exist in `ts-node/esm`.
+- Be sure to check the `.vscode` settings to setup the build task, and setup the preference to use the workspace's typescript sdk.
+- Add the following to aid with the ESM style imports:
+  ```json
+  {
+  `"javascript.preferences.importModuleSpecifierEnding": "js",
+  `"typescript.preferences.importModuleSpecifierEnding": "js"
+  }
+  ```
 
-The way we solve the above is to update `package.json`'s `main` field point to `src/index.ts` instead. Obviously this is not really a good idea becuase if we would publish the package it would not work. However for internal develpoment between packages using yarn workspaces and typescript project references it seems to work.
+## Migrating to ESM
 
-It is possible to workaround the problem above for snowpack but not for node with ts-node/esm. For snowpack we can put a config for `packageOptions.packageLookupFields: ["tsMain", "main"]` and then add an extra filed in `shared/package.json` for `tsMain: src/index.ts`. However this trick does not work for ts-node/esm as it does not have this kind of config option.
+There are other resources out there, so I'll keep this brief to my key notes:
 
-The best solution both for snowpack and ts-node/esm is probably to do the same thing as the typescript language server is doing. It looks at tsconfig.json to determnine the original ts file that corresponds to the js file in `package.json`'s `main` field.
+### Reading and references:
+
+- [sindresorhus/esm-package gist](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
+- [Jaid/migratingRules gist on eslint](https://gist.github.com/Jaid/164668c0151ae09d2bc81be78a203dd5)
+- [Jest repo](https://github.com/facebook/jest/blob/main/package.json) a proper yarn workspaces example.
+
+### Notes:
+
+- You cannot use `.ts` extension in your imports, but strangely enough, if you add `.js` extension to a project that builds properly, vscode will allow you to `cmd+click` to go into the desired `.ts` file. Very strange, but ultimately the output in `dist` is then correct.
