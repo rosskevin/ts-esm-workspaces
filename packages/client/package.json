@@ -1,5 +1,6 @@
 {
   "name": "@rosskevin/ts-esm-workspaces-client",
+  "description": "Browser based published ESM library",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
