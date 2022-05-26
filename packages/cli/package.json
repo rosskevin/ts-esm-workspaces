@@ -4,10 +4,13 @@
   "main": "index.js",
   "type": "module",
   "license": "MIT",
+  "bin": {
+    "hello": "./dist/bin/hello.js"
+  },
   "dependencies": {
-    "koa": "^2.13.4"
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
-    "@types/koa": "^2.13.4"
+    "@types/shelljs": "^0"
   }
 }
