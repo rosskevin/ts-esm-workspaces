@@ -16,12 +16,12 @@ This is not complete and is actively being worked on. If commits are not made da
 
 ## Current issues
 
-- `main` in `project.json` is required for building. This is invalid, as this is an ESM-only module and there should be no fallback at all to CJS (because one does not exist). It seems like a false flag pretending to be CJS, when this seems like a Typescript resolution error instead.
+- `main` in `project.json` is required for building ([see bug #49266](https://github.com/microsoft/TypeScript/issues/49266)). This is invalid, as this is an ESM-only module and there should be no fallback at all to CJS (because one does not exist). It seems like a false flag pretending to be CJS, when this seems like a Typescript resolution error instead. From the handbook:
+  > Node.js supports a new field for defining entry points in package.json called "exports". This field is a more powerful alternative to defining "main" in package.json, and can control what parts of your package are exposed to consumers.
 
 ## Status
 
-- `tsc -b` works, but only with the above `main` issue caveat. Still more to do and try.
-  > Node.js supports a new field for defining entry points in package.json called "exports". This field is a more powerful alternative to defining "main" in package.json, and can control what parts of your package are exposed to consumers.
+- We are faking `main` until we make it, see above.
 
 ## Structure
 
