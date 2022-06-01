@@ -5,6 +5,8 @@
 
   "extends": "./tsconfig.react.json",
   "compilerOptions": {
+    "moduleResolution": "nodenext",
+
     "noEmit": false,
     "emitDeclarationOnly": false,
     "sourceMap": true

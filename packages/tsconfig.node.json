@@ -4,7 +4,7 @@
   "display": "Shared node base",
 
   "compilerOptions": {
-    // "moduleResolution": "nodenext",
+    "moduleResolution": "nodenext",
 
     // ----
     // https://github.com/sindresorhus/tsconfig/blob/main/tsconfig.json
