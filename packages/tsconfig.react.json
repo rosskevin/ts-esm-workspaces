@@ -11,8 +11,6 @@
     // Final webpack should target modern browsers instead of es5 with es2015
     // "target": "es2015",
 
-    // "moduleResolution": "node",
-
     // Do not allow js
     "allowJs": false,
     // No js, ts, maps when errors are reported

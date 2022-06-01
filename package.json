@@ -11,8 +11,7 @@
   "scripts": {
     "build": "tsc -b",
     "rebuild": "run-s clean build",
-    "clean": "tsc -b --clean && rm -rf packages/*/dist",
-    "manipulate-dist-package-main-must-be-removed!!!": "node scripts/build-prod.js"
+    "clean": "tsc -b --clean && rm -rf packages/*/dist"
   },
   "devDependencies": {
     "@tsconfig/create-react-app": "^1.0.2",
