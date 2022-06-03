@@ -2,7 +2,13 @@
 
 ## Status
 
-- It builds!
+- It FAILS!
+
+## Current issues
+
+- Using `"moduleResolution": "nodenext"` fails to recognize `export * from`. This is heavily used in our codebase as well as popular libraries such as @apollo/client.  Is this correlated to the problem?
+- Apollo does not use proper exports https://github.com/apollographql/apollo-client/pull/9697
+- If any dependency does not use proper exports, you cannot successfully build, and have to fallback to `"moduleResolution": "node"` AND you have to FAKE the `project.json` `main` in order for typescript to build https://github.com/microsoft/TypeScript/issues/49266#issuecomment-1146391005
 
 ## Goals
 
@@ -13,10 +19,6 @@
 - Browser _and_ Node targeted modules reusing a `shared` library (all published)
 - Follow the latest guidance from https://www.typescriptlang.org/docs/handbook/esm-node.html
 - Build simply with `tsc -b`
-
-## Current issues
-
-- Using `"moduleResolution": "nodenext"` fails to recognize `export * from`. This is heavily used in our codebase as well as popular libraries such as @apollo/client.
 
 ## Previous issues
 
