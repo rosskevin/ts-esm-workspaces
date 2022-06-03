@@ -16,11 +16,11 @@
 
 ## Current issues
 
-- [[demo on branch](https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build)] `main` in `project.json` is required for building ([see bug #49266](https://github.com/microsoft/TypeScript/issues/49266)). This is seems like incorrect behavior, as this repo produces ESM-only modules and there should be no fallback at all to CJS (because one does not exist). It seems like a false flag pretending to be CJS, when this seems like a Typescript resolution error instead. From the handbook:
+- none known at this point.
 
-  > Node.js supports a new field for defining entry points in package.json called "exports". This field is a more powerful alternative to defining "main" in package.json, and can control what parts of your package are exposed to consumers.
+## Previous issues
 
-  A `workaround` or `solution` (not sure yet) is to use `"moduleResolution": "nodenext"` in all projects so that typescript recognizes the `exports` properly. I do not yet know if there is a consequence to this action or if it will impact browser projects in any way.
+- [Exports map not recognized without `main` fallback](https://github.com/microsoft/TypeScript/issues/49266#issuecomment-1145219711) - this simply means you need to use `"moduleResolution": "nodenext"`.
 
 ## Structure
 
