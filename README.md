@@ -16,7 +16,7 @@
 
 ## Current issues
 
-- none known at this point.
+- Using `"moduleResolution": "nodenext"` fails to recognize `export * from`. This is heavily used in our codebase as well as popular libraries such as @apollo/client.
 
 ## Previous issues
 

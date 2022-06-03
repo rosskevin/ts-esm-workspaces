@@ -11,7 +11,9 @@
     }
   },
   "dependencies": {
+    "@apollo/client": "^3.6.6",
     "@rosskevin/ts-esm-workspaces-shared": "1.0.0",
+    "apollo-link-logger": "^2.0.0",
     "shelljs": "^0.8.5"
   }
 }
