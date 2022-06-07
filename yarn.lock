@@ -9,7 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@rosskevin/ts-esm-workspaces-cli@workspace:packages/cli"
   dependencies:
-    "@rosskevin/ts-esm-workspaces-shared": "workspace:*"
+    "@rosskevin/ts-esm-workspaces-shared": 1.0.0
     "@types/shelljs": ^0
     shelljs: ^0.8.5
   bin:
@@ -21,7 +21,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@rosskevin/ts-esm-workspaces-client@workspace:packages/client"
   dependencies:
-    "@rosskevin/ts-esm-workspaces-shared": "workspace:*"
+    "@rosskevin/ts-esm-workspaces-shared": 1.0.0
     shelljs: ^0.8.5
   languageName: unknown
   linkType: soft

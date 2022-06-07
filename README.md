@@ -4,7 +4,7 @@
 
 It builds! (This is the same as saying "it works on my machine").  
 
-BUT when used in any larger application, it appears that you aren't going to feasibly be able to use `"moduleResolution": "nodenext"` for some time.  If you use _any_ dependency that does not meet the ESM standard, you will have to switch to `"moduleResolution": "node"` and fake/hack the `main` in the `package.json` (at least for building purposes.  I have a test case here: https://github.com/rosskevin/ts-esm-workspaces/tree/apollo-exports and filed an issue with some helpful context here: https://github.com/microsoft/TypeScript/issues/49388
+BUT when used in any larger application, it appears that you aren't going to feasibly be able to use `"moduleResolution": "nodenext"` for some time.  If you use _any_ dependency that does not meet the ESM standard, you will have to switch to `"moduleResolution": "node"` and fake/hack the `main` in the `package.json` (at least for building purposes.  I have a [test case on this branch](https://github.com/rosskevin/ts-esm-workspaces/tree/apollo-exports) and filed an issue with some helpful context here: https://github.com/microsoft/TypeScript/issues/49388
 
 ## Goals
 
