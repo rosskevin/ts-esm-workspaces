@@ -1,10 +1,16 @@
 # ts-esm-workspaces
 
+## TL;DR - Don't do it...yet.
+
+Ok, so I’ve finally gotten far enough converting our internal libraries to figure out that attempting to make a small utility library ESM is fine, but it’s _not feasible_ (as of 6/8/2022) for anything complex because something is inevitably going to be CJS and it will either not be loaded by node or via `"moduleResolution": "nodenext"`.
+
+I have to go back to dual builds - One CJS and one ESM-like (but not totally), basically what we have been doing for years to allow for execution of node scripts that use CJS libraries as well as allow webpack to tree-shake ESM-like front end libraries.
+
 ## Status
 
-It builds! (This is the same as saying "it works on my machine").  
+It builds! (This is the same as saying "it works on my machine").
 
-BUT when used in any larger application, it appears that you aren't going to feasibly be able to use `"moduleResolution": "nodenext"` for some time.  If you use _any_ dependency that does not meet the ESM standard, you will have to switch to `"moduleResolution": "node"` and fake/hack the `main` in the `package.json` (at least for building purposes.  I have a [test case on this branch](https://github.com/rosskevin/ts-esm-workspaces/tree/apollo-exports) and filed an issue with some helpful context here: https://github.com/microsoft/TypeScript/issues/49388
+BUT when used in any larger application, it appears that you aren't going to feasibly be able to use `"moduleResolution": "nodenext"` for some time. If you use _any_ dependency that does not meet the ESM standard, you will have to switch to `"moduleResolution": "node"` and fake/hack the `main` in the `package.json` (at least for building purposes. I have a [test case on this branch](https://github.com/rosskevin/ts-esm-workspaces/tree/apollo-exports) and filed an issue with some helpful context here: https://github.com/microsoft/TypeScript/issues/49388
 
 ## Goals
 
@@ -15,7 +21,6 @@ BUT when used in any larger application, it appears that you aren't going to fea
 - Browser _and_ Node targeted modules reusing a `shared` library (all published)
 - Follow the latest guidance from https://www.typescriptlang.org/docs/handbook/esm-node.html
 - Build simply with `tsc -b`
-
 
 ## Previous issues
 
