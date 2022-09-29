@@ -1,4 +1,5 @@
 {
   "packageFile": ["./package.json", "./packages/*/package.json"],
-  "packageManager": "yarn"
+  "packageManager": "yarn",
+  "reject": ["@rosskevin/ts-esm-workspaces-shared"]
 }
