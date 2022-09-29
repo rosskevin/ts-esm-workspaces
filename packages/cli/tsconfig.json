@@ -3,9 +3,10 @@
   "extends": "../tsconfig.node.json",
   "include": ["src"],
   "compilerOptions": {
-    "composite": true,
     "outDir": "dist",
     "rootDir": "src"
   },
-  "references": [{ "path": "../shared" }]
+  "paths": {
+    "vite": ["../shared/src/index.ts"]
+  }
 }

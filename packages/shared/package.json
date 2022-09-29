@@ -17,6 +17,11 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "xxprepublishOnly": "npm run build"
+  },
   "devDependencies": {
     "unbuild": "^0.8.11"
   }

@@ -2,10 +2,5 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "All packages to type check",
   "files": [],
-  "references": [
-    { "path": "packages/client" },
-    { "path": "packages/cli" },
-    { "path": "packages/shared" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

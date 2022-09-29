@@ -6,5 +6,7 @@
     "outDir": "dist",
     "rootDir": "src"
   },
-  "references": [{ "path": "../shared" }]
+  "paths": {
+    "vite": ["../shared/src/index.ts"]
+  }
 }
