@@ -21,9 +21,7 @@ WIP
 
 ## Previous issues
 
-We are switching directions on this branch to Vite/tsup, but it is helpful to recall the issues on the `main` branch:
-
-- [Exports map not recognized without `main` fallback](https://github.com/microsoft/TypeScript/issues/49266#issuecomment-1145219711) - this simply means you need to use `"moduleResolution": "nodenext"`.
+We are switching directions on this branch to Vite/tsup, but it is helpful to recall the issues on the [`main` branch](https://github.com/rosskevin/ts-esm-workspaces).
 
 ## Structure
 
