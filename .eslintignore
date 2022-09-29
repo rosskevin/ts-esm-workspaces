@@ -1,0 +1,12 @@
+node_modules
+packages/*/node_modules
+packages/*/dist
+**/locales/index.*
+typings-local
+typings
+.yarn
+.storybook
+babel.config.js
+jest.config.js
+rollup.config.js
+.eslintrc.js

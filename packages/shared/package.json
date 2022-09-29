@@ -4,10 +4,20 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "unbuild": "^0.8.11"
   }
 }

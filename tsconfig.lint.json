@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["./packages/*/src/**/*", "vite.config.ts", "./packages/*/build.config.ts"]
+}

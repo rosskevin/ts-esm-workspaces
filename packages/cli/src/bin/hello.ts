@@ -1,10 +1,10 @@
 /**
  * Simplest cli tool we can create
  */
-import * as shell from "shelljs";
-import { inc, appendMessage } from "@rosskevin/ts-esm-workspaces-shared";
+import { inc } from '@rosskevin/ts-esm-workspaces-shared'
+import * as shell from 'shelljs'
 
-let count = 100
+const count = 100
 const message = `world ${inc(count)}`
 
-shell.exec(`echo "${message}"`);
+shell.exec(`echo "${message}"`)
