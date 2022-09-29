@@ -1,6 +1,6 @@
 # ts-esm-workspaces
 
-## TL;DR - Don't do it...yet.
+## TL;DR
 
 WIP
 
@@ -11,8 +11,9 @@ WIP
 ## Goals
 
 - A _publishable_ set of packages (not just an internal build)
-- Vite - for fast builds
-- Typescript
+- Vite - for fast bundles with storybook
+- tsup - for fast library builds + typechecking/dts generation (still uses tsc for that)
+- Typescript (with paths not project references?)
 - Storybook
 - Yarn 2+ workspaces
 - Browser _and_ Node targeted modules reusing a `shared` library (all published)
@@ -20,7 +21,7 @@ WIP
 
 ## Previous issues
 
-We are switching directions on this branch to Vite, but it is helpful to recall the issues on the `main` branch:
+We are switching directions on this branch to Vite/tsup, but it is helpful to recall the issues on the `main` branch:
 
 - [Exports map not recognized without `main` fallback](https://github.com/microsoft/TypeScript/issues/49266#issuecomment-1145219711) - this simply means you need to use `"moduleResolution": "nodenext"`.
 
