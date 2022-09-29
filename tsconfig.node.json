@@ -9,5 +9,5 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts", "./packages/*/build.config.ts"]
+  "include": ["vite.config.ts", "./packages/*/build.config.ts", , "./packages/*/tsup.config.ts"]
 }

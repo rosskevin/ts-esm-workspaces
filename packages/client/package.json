@@ -4,14 +4,26 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
   "dependencies": {
-    "@rosskevin/ts-esm-workspaces-shared": "1.0.0",
-    "shelljs": "^0.8.5"
+    "@rosskevin/ts-esm-workspaces-shared": "1.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^6.2.3"
   }
 }
