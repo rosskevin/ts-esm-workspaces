@@ -4,13 +4,15 @@
   "display": "Shared node base",
 
   "compilerOptions": {
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
+
+    // "module": "NodeNext",
+    "module": "esnext", // pulumi complains of es2022
+    "target": "esnext", // pulumi complains of es2022
 
     // ----
     // https://github.com/sindresorhus/tsconfig/blob/main/tsconfig.json
     "lib": ["dom", "dom.iterable", "es2020"],
-    "module": "NodeNext",
-    "target": "es2020", // Node.js >=14
 
     "allowSyntheticDefaultImports": true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import. This flag tells TypeScript that it's okay to use import on CommonJS modules.
     "resolveJsonModule": false, // ESM doesn't yet support JSON modules.
@@ -39,6 +41,9 @@
     // Report errors on unused local variables.
     "noUnusedLocals": false,
     // obj[foo] suppression
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+
+    // vite suggestions
+    "useDefineForClassFields": true
   }
 }

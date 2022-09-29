@@ -33,6 +33,12 @@
     "isolatedModules": true,
 
     // material-ui uses emotion https://emotion.sh/docs/typescript
-    "jsxImportSource": "@emotion/react"
+    // "jsxImportSource": "@emotion/react",  NEED for mui 5.x
+
+    // https://github.com/jquense/yup#typescript-configuration
+    "strictFunctionTypes": false,
+
+    // vite suggestions
+    "useDefineForClassFields": true
   }
 }
