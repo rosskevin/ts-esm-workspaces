@@ -5,23 +5,19 @@
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "dev": "unbuild --stub",
-    "build": "unbuild"
+    "build": "tsup --config ../tsup.common.ts"
   },
   "devDependencies": {
-    "unbuild": "^0.8.11"
+    "tsup": "^6.2.3"
   }
 }

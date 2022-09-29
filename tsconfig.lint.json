@@ -2,5 +2,10 @@
   "compilerOptions": {
     "noEmit": true
   },
-  "include": ["./packages/*/src/**/*", "vite.config.ts", "./packages/*/build.config.ts"]
+  "include": [
+    "./packages/*/src/**/*",
+    "vite.config.ts",
+    // "./packages/tsup.*.ts",
+    "./packages/*/tsup.config.ts"
+  ]
 }

@@ -1,10 +1,7 @@
 import { defineConfig } from 'tsup'
 
+import common from '../tsup.common'
+
 export default defineConfig({
-  entry: ['src/index.ts'],
-  splitting: false,
-  sourcemap: true,
-  clean: true,
-  dts: true,
-  format: ['esm', 'cjs']
+  ...common,
 })
