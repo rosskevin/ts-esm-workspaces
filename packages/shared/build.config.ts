@@ -2,7 +2,7 @@ import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
   entries: ['src/index'],
-  externals: ['vite'],
+  // externals: ['other shared project?'],
   clean: true,
   declaration: true,
   rollup: {

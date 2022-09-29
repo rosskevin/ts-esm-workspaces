@@ -19,8 +19,7 @@
   ],
   "scripts": {
     "dev": "unbuild --stub",
-    "build": "unbuild",
-    "xxprepublishOnly": "npm run build"
+    "build": "unbuild"
   },
   "devDependencies": {
     "unbuild": "^0.8.11"

@@ -25,11 +25,11 @@
     "suppressImplicitAnyIndexErrors": true,
 
     // Ensure that .d.ts files are created by tsc, but not .js files (babel will do this for us)
-    "declaration": true,
-    "emitDeclarationOnly": true,
+    // "declaration": true,
+    // "emitDeclarationOnly": true,
     // Generates a source map for .d.ts files which map back to the original .ts source file.
-    "declarationMap": true,
-    // Ensure that Babel can safely transpile files in the TypeScript project
+    // "declarationMap": true,
+    // Ensure that Babel or esbuild can safely transpile files in the TypeScript project
     "isolatedModules": true,
 
     // material-ui uses emotion https://emotion.sh/docs/typescript

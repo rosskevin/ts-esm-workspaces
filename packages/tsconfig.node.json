@@ -29,7 +29,7 @@
     // "allowSyntheticDefaultImports": true,
 
     // Ensure that .d.ts files are created by tsc
-    "declaration": true,
+    // "declaration": true,
     // Do not allow js
     "allowJs": false,
     // No js, ts, maps when errors are reported
