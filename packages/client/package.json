@@ -18,9 +18,15 @@
     "build": "tsup"
   },
   "dependencies": {
-    "@rosskevin/ts-esm-workspaces-shared": "1.0.0"
+    "@rosskevin/ts-esm-workspaces-shared": "1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
     "tsup": "^6.2.3"
   }
 }

@@ -1,14 +1,15 @@
-import React from 'react';
+import './page.css'
 
-import { Header } from './Header';
-import './page.css';
+import * as React from 'react'
+
+import { Header } from './Header'
 
 type User = {
-  name: string;
-};
+  name: string
+}
 
 export const Page: React.VFC = () => {
-  const [user, setUser] = React.useState<User>();
+  const [user, setUser] = React.useState<User>()
 
   return (
     <article>
@@ -69,5 +70,5 @@ export const Page: React.VFC = () => {
         </div>
       </section>
     </article>
-  );
-};
+  )
+}

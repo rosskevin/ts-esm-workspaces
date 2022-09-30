@@ -5,8 +5,8 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src"
-  },
-  "paths": {
-    "vite": ["../shared/src/index.ts"]
   }
+  // "paths": {
+  //   "foo": ["../shared/src/index.ts"]
+  // }
 }

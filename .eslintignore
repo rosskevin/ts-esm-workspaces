@@ -5,6 +5,5 @@ packages/*/dist
 typings-local
 typings
 .yarn
-.storybook
 .eslintrc.js
 packages/*.ts

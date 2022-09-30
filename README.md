@@ -2,11 +2,11 @@
 
 ## TL;DR
 
-WIP
+Monorepo, Yarn workspaces, Typescript, tsup, Storybook w/ vite builder, eslint, prettier, ts config files.
 
 ## Status
 
-WIP
+Done, works. Builds, lints, shared code used in storybook, etc.
 
 ## Goals
 
