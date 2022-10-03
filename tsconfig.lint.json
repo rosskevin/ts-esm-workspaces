@@ -3,7 +3,7 @@
     "noEmit": true
   },
   "include": [
-    "./packages/*/src/**/*",
+    // "./packages/*/src/**/*",
     "vite.config.ts",
     // "./packages/tsup.*.ts",
     "./packages/*/tsup.config.ts"

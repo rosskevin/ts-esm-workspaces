@@ -1,9 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
 
-  "display": "Node related files for IDE type checking",
+  "display": "Node related config files for IDE type checking.  See packages/*/tsconfig.json for code.",
 
   "compilerOptions": {
+    "noEmit": true,
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",

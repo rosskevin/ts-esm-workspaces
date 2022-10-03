@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/await-thenable */
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { userEvent, within } from '@storybook/testing-library'
 import * as React from 'react'

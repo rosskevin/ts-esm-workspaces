@@ -4,9 +4,9 @@
   "include": ["src"],
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src"
+    "baseUrl": "./",
+    "paths": {
+      "@rosskevin/ts-esm-workspaces-shared": ["../shared/src"]
+    }
   }
-  // "paths": {
-  //   "foo": ["../shared/src/index.ts"]
-  // }
 }
