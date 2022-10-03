@@ -23,7 +23,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@alienfast/eslint-config": "^3.0.27",
+    "@alienfast/eslint-config": "^4.0.1",
     "@storybook/addon-a11y": "^7.0.0-alpha.34",
     "@storybook/addon-actions": "^7.0.0-alpha.34",
     "@storybook/addon-essentials": "^7.0.0-alpha.34",
