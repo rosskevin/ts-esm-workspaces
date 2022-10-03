@@ -29,7 +29,7 @@ module.exports = {
   },
   parserOptions: {
     project: [
-      './tsconfig.lint.json', // for config files etc, outside of src directories
+      './tsconfig.json', // for config files etc, outside of src directories
       './packages/*/tsconfig.json' // all code in src directories
     ],
     ecmaVersion: 'latest',

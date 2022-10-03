@@ -1,6 +1,21 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "All packages to type check",
-  "files": [],
-  "references": [{ "path": "./tsconfig.node.json" }]
+
+  "display": "Node related config files for IDE type checking.  See packages/*/tsconfig.json for code.",
+
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "vite.config.ts",
+    "./packages/tsup.*.ts",
+    "./packages/*/tsup.config.ts",
+    ".storybook/*.ts*",
+    ".storybook/preview.tsx"
+  ]
 }

@@ -9,5 +9,5 @@ export default defineConfig({
     sourcemap: true,
     chunkSizeWarningLimit: 99999,
   },
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths({ root: 'packages' })],
 })
