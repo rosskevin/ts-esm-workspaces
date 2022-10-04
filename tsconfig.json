@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
 
-  "display": "Node related config files for IDE type checking.  See packages/*/tsconfig.json for code.",
+  "display": "Node related config files for IDE type checking and linting.  See packages/*/tsconfig.json for code.",
 
   "compilerOptions": {
     "noEmit": true,
