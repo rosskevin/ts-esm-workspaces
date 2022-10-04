@@ -11,9 +11,9 @@
     },
     {
       "path": "packages/shared"
+    },
+    {
+      "path": "./tsconfig.node.json"
     }
-    // {
-    //   "path": "./tsconfig.config.json"
-    // }
   ]
 }
