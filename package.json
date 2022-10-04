@@ -9,6 +9,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "b": "tsc -b",
     "build": "yarn workspaces foreach run build",
     "rebuild": "run-s clean build",
     "clean": "tsc -b --clean && rm -rf packages/*/dist",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@alienfast/eslint-config": "^4.0.2",
+    "@monorepo-utils/workspaces-to-typescript-project-references": "^2.8.2",
     "@storybook/addon-a11y": "^7.0.0-alpha.34",
     "@storybook/addon-actions": "^7.0.0-alpha.34",
     "@storybook/addon-essentials": "^7.0.0-alpha.34",
@@ -37,7 +39,6 @@
     "@types/node": "^18.8.0",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.1",

@@ -4,7 +4,7 @@ import * as React from 'react'
 
 import { presentSomething } from '../presentSomething'
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */

@@ -2,11 +2,11 @@
 
 ## TL;DR
 
-Monorepo, Yarn workspaces, Typescript, tsup, Storybook w/ vite builder, eslint, prettier, ts config files.
+Monorepo, Yarn workspaces, Typescript w/project references, tsup, Storybook w/ vite builder, eslint, prettier, ts config files.
 
 ## Status
 
-Done, works. Builds, lints, shared code used in storybook, etc.
+Project references do not work with `tsup` - see https://github.com/egoist/tsup/issues/647. This repo works without project references, see the `vite` branch, but that branch DOES NOT PROVIDE wholistic type checking for the IDE (vscode)
 
 ## Goals
 

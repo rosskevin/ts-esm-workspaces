@@ -3,10 +3,17 @@
   "extends": "../tsconfig.node.json",
   "include": ["src"],
   "compilerOptions": {
+    "composite": true,
     "outDir": "dist",
+    "rootDir": "src",
     "baseUrl": "./",
     "paths": {
       "@rosskevin/ts-esm-workspaces-shared": ["../shared/src"]
     }
-  }
+  },
+  "references": [
+    {
+      "path": "../shared"
+    }
+  ]
 }
