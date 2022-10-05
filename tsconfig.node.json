@@ -12,11 +12,11 @@
   "include": [
     "vite.config.ts",
     "tsup.config.ts",
+    "./packages/*/tsup.config.ts",
     "scripts/*.js",
     ".storybook/*.ts*",
     ".storybook/preview.tsx",
-    "./packages/*/src",
     "scripts/pre-tsup.js",
-    "scripts/pre-tsup.js"
+    "./packages/*/src"
   ]
 }
