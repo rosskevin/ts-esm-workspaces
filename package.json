@@ -11,7 +11,7 @@
   "scripts": {
     "build": "run-s clean build:ide pretsup build:tsup",
     "build:ide": "echo 'tsc -b' && tsc -b",
-    "build:tsup": "lerna exec --stream --parallel -- yarn tsup --config ../../tsup.config.ts",
+    "build:tsup": "lerna exec --stream --parallel -- yarn build",
     "pretsup": "echo 'removing js' && node ./scripts/pre-tsup.js",
     "clean": "echo 'cleaning' && tsc -b --clean && rm -rf packages/*/dist",
     "lint": "eslint . --cache --ext .js,.ts,.tsx",
@@ -28,7 +28,6 @@
     "@alienfast/eslint-config": "^4.0.2",
     "@lerna-lite/cli": "^1.11.3",
     "@lerna-lite/exec": "^1.11.3",
-    "@monorepo-utils/workspaces-to-typescript-project-references": "^2.8.2",
     "@storybook/addon-a11y": "^7.0.0-alpha.34",
     "@storybook/addon-actions": "^7.0.0-alpha.34",
     "@storybook/addon-essentials": "^7.0.0-alpha.34",

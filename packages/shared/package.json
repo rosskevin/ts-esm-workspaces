@@ -15,8 +15,7 @@
     }
   },
   "scripts": {
-    "build": "tsup --config ../../tsup.config.ts",
-    "xxbuild": "tsup --config ../../tsup.config.ts --onSuccess 'tsc --emitDeclarationOnly --declaration'"
+    "build": "tsup --config ../../tsup.config.ts"
   },
   "devDependencies": {
     "tsup": "^6.2.3",
