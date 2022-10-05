@@ -6,16 +6,20 @@ Monorepo, Yarn workspaces, Typescript w/project references, tsup, Storybook w/ v
 
 ## Status
 
-Project references do not work with `tsup` - see https://github.com/egoist/tsup/issues/647. This repo works without project references, see the `vite` branch, but that branch DOES NOT PROVIDE wholistic type checking for the IDE (vscode)
+This works, but it does so working around an issue with `tsup` and typescript project references. See https://github.com/egoist/tsup/issues/647#issuecomment-1268777707
 
 ## Goals
 
 - A _publishable_ set of packages both cjs and esm (not just an internal build)
-- Type checks and published types
-- Typescript (with paths not project references?)
+- Typescript with project references - provides convenient type checking for the ide
+- Typescript with tsconfig paths - allows it to work with existing vite toolchains
 - Storybook
 - Browser _and_ Node targeted modules reusing a `shared` library (all published)
 - Faster and easier
+
+## Build process
+
+It's a bit convoluted, see this comment https://github.com/egoist/tsup/issues/647#issuecomment-1268777707
 
 ## Strategy
 
