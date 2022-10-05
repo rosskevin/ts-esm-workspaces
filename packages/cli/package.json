@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "build": "tsup-node --config ../tsup.common.ts"
+    "build": "tsup-node --config ../../tsup.config.ts"
   },
   "bin": {
     "hello": "./dist/bin/hello.js"

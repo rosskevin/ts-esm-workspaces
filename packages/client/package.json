@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup --config ../../tsup.config.ts"
   },
   "dependencies": {
     "@rosskevin/ts-esm-workspaces-shared": "1.0.0",
@@ -27,6 +27,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "tsup": "^6.2.3"
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.4"
   }
 }

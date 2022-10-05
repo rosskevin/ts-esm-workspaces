@@ -6,14 +6,17 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "allowJs": true
   },
   "include": [
     "vite.config.ts",
-    "./packages/tsup.*.ts",
-    "./packages/*/tsup.config.ts",
+    "tsup.config.ts",
+    "scripts/*.js",
     ".storybook/*.ts*",
     ".storybook/preview.tsx",
-    "./packages/*/src"
+    "./packages/*/src",
+    "scripts/pre-tsup.js",
+    "scripts/pre-tsup.js"
   ]
 }
