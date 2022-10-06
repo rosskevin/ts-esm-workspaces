@@ -19,6 +19,8 @@
     "hello": "./dist/bin/hello.js"
   },
   "dependencies": {
+    "@alienfast/logger": "10.0.0--canary.3.f2fba24.0",
+    "@alienfast/logger-node": "10.0.0--canary.3.f2fba24.0",
     "@rosskevin/ts-esm-workspaces-shared": "1.0.0",
     "execa": "^6.1.0",
     "lodash-es": "^4.17.21"

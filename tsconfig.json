@@ -4,17 +4,9 @@
   "files": [],
   "compilerOptions": { "composite": true },
   "references": [
-    {
-      "path": "packages/cli"
-    },
-    {
-      "path": "packages/client"
-    },
-    {
-      "path": "packages/shared"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
+    { "path": "packages/cli" },
+    { "path": "packages/client" },
+    { "path": "packages/shared" },
+    { "path": "./tsconfig.node.json" }
   ]
 }

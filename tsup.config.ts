@@ -6,7 +6,7 @@ export default defineConfig({
   entry: ['src/index.ts'],
   sourcemap: true,
   clean: true,
-  // dts: true,
+  // dts: true, // bug with project references https://github.com/egoist/tsup/issues/647#issuecomment-1268777707
   format: ['esm'], // 'cjs'],
   minify: true,
   // async onSuccess() {
