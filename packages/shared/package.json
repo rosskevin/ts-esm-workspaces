@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "main-note": "This is to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
-  "main": "src/index.ts",
+  "main": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
