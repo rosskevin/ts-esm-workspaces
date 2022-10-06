@@ -1,16 +1,17 @@
+/* eslint-disable no-console */
 /**
- * Simplest cli tool we can create
+ * Simplest cli tool we can create - exercise esm as well
  */
+
 import { inc } from '@rosskevin/ts-esm-workspaces-shared'
-import { merge } from 'lodash'
-import * as shell from 'shelljs'
+import { execaSync } from 'execa'
+import { merge } from 'lodash-es'
 
 const count = 100
 const message = `world ${inc(count)}`
 
+const { stdout } = execaSync('echo', [message])
+console.log(stdout)
+
 const foo = merge({}, { hello: 'world' })
-
-shell.exec(`echo "${message}"`)
-
-// eslint-disable-next-line no-console
 console.log(foo)

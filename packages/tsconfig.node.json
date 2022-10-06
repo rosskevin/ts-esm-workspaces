@@ -5,6 +5,7 @@
 
   "compilerOptions": {
     "moduleResolution": "node",
+    // "moduleResolution": "nodenext",
 
     // "module": "NodeNext",
     "module": "esnext", // pulumi complains of es2022

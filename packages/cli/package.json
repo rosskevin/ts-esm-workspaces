@@ -4,29 +4,27 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main-note": "This is to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build",
+  "main": "src/index.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.js"
     }
   },
   "scripts": {
     "build": "tsup-node --config ./tsup.config.ts"
   },
   "bin": {
-    "hello": "./dist/bin/hello.cjs"
+    "hello": "./dist/bin/hello.js"
   },
   "dependencies": {
     "@rosskevin/ts-esm-workspaces-shared": "1.0.0",
-    "lodash": "^4.17.21",
-    "shelljs": "^0.8.5"
+    "execa": "^6.1.0",
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
-    "@types/lodash": "^4",
+    "@types/lodash-es": "^4",
     "@types/shelljs": "^0",
     "tsup": "^6.2.3"
   }

@@ -13,7 +13,7 @@
     "build:ide": "echo 'tsc -b' && tsc -b",
     "build:tsup": "lerna exec --stream --parallel -- yarn build",
     "pretsup": "echo 'removing js' && node ./scripts/pre-tsup.js",
-    "clean": "echo 'cleaning' && tsc -b --clean && rm -rf packages/*/dist",
+    "clean": "echo 'cleaning' && tsc -b --clean && rm -rf packages/*/dist || true",
     "lint": "eslint . --cache --ext .js,.ts,.tsx",
     "lintx": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --cache --ext .js,.ts,.tsx --fix",

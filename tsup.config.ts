@@ -7,7 +7,7 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   // dts: true,
-  format: ['esm', 'cjs'],
+  format: ['esm'], // 'cjs'],
   minify: true,
   // async onSuccess() {
   //   console.log(`DTS running tsc for types (in ${process.cwd()})...`)
