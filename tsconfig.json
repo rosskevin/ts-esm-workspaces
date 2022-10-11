@@ -2,7 +2,13 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "...",
   "files": [],
-  "compilerOptions": { "composite": true },
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": "./",
+    "paths": {
+      "@rosskevin/ts-esm-workspaces-shared": ["./packages/shared/src"]
+    }
+  },
   "references": [
     { "path": "packages/cli" },
     { "path": "packages/client" },
