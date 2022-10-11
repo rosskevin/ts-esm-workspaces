@@ -10,7 +10,8 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",
-    "allowJs": true
+    "allowJs": true,
+    "skipLibCheck": true
   },
   "include": [
     ".eslintrc.js",
@@ -20,7 +21,9 @@
     "./packages/*/tsup.config.ts",
     "scripts/*.js",
     ".storybook/*.ts*",
-    ".storybook/preview.tsx",
-    "./packages/*/src"
-  ]
+    "./packages/*/src",
+    "./typings/**/*",
+    "./typings-local/**/*"
+  ],
+  "exclude": ["node_modules", "packages/*/node_modules", "packages/*/dist"]
 }
