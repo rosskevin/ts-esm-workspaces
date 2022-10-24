@@ -19,6 +19,26 @@ packages/client/src/presentSomething.ts:1:36 - error TS2307: Cannot find module 
 
 But with the `main` intact, resolution occurs and it builds witout error. Bug? Seems so from my perspective.
 
+## Workaround
+
+Since my switch to esm-like (not using file extensions yet), tsup, vite - I've started defining my packages like the following, note the `main` and `typings` workarounds:
+
+```json
+  "type": "module",
+  "main-note": "This is to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build ",
+  "main": "./dist/index.js",
+  "typings": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+```
+
+This gets me mostly what I want, but it is not perfect - e.g. look at `npm pack` implications.  But, it does avoid the TS2307 error in a monorepo.
+
 ## Reproduction
 
 `yarn install`
