@@ -27,7 +27,7 @@ Since my switch to esm-like (not using file extensions yet), tsup, vite - I've s
   "type": "module",
   "main-note": "This is to appease tsc in moduleResolution: node see https://github.com/rosskevin/ts-esm-workspaces/tree/bug-main-required-to-build ",
   "main": "./dist/index.js",
-  "typings": "./src/index.ts",
+  "typings": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
