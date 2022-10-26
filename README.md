@@ -37,7 +37,7 @@ Since my switch to esm-like (not using file extensions yet), tsup, vite - I've s
   "sideEffects": false,
 ```
 
-This gets me mostly what I want, but it is not perfect - e.g. look at `npm pack` implications.  But, it does avoid the TS2307 error in a monorepo.
+This gets me mostly what I want, but it is not perfect - e.g. `typings` is incorrect when packed.  This can be worked around by altering the package and removing `typings` right before publish with https://github.com/roydukkey/clean-package.  Sounds complicated, but it builds well locally, avoids the TS2307 error in a monorepo, and publishes a viable package.
 
 ## Reproduction
 
